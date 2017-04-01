@@ -7,6 +7,8 @@
 SoftwareSerial esp8266(2, 3);
  
 #define DEBUG true
+ String ssid = "rede";
+ String password = "senha";
  
 void setup()
 {
@@ -15,7 +17,7 @@ void setup()
  
   sendData("AT+RST\r\n", 2000, DEBUG); // rst
   // Conecta a rede wireless
-  sendData("AT+CWJAP=\"LABSE\",\"labse0987\"\r\n", 2000, DEBUG);
+  sendData("AT+CWJAP=\""+ssid+"\",\""+password+"\"\r\n", 2000, DEBUG);
   delay(3000);
   sendData("AT+CWMODE=1\r\n", 1000, DEBUG);
   // Mostra o endereco IP

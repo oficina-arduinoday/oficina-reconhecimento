@@ -2,8 +2,8 @@
 #include <WiFiClient.h>
  
 // WiFi information
-const char WIFI_SSID[] = "Arduino";
-const char WIFI_PSK[] = "364455391a";
+const char WIFI_SSID[] = "rede";
+const char WIFI_PSK[] = "senha";
  
 // Remote site information
 const char http_site[] = "gisexp.icomp.ufam.edu.br";

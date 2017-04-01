@@ -18,23 +18,15 @@ void setup() {
   //radio.setRetries(15,15);
   radio.printDetails();
  
-  pinMode(6, OUTPUT);
 }
 
 void loop() {
-  digitalWrite(6, HIGH);
   delay(300);
-  //Serial.println("aqui1");
   int joystickValue = analogRead(portJoystick);
   Serial.println("joystick: " + String(joystickValue));
   int angleValue = map(joystickValue, 0, 1023, 0, 180);
-  //Serial.println("aqui2");
-  //Serial.println("Transmissor: " + String(angleValue));
-  if (angleValue == 0) angleValue = 1;
   Serial.println("Transmissor: " + String(angleValue));
-  Serial.println("sizeof: " + String(sizeof(angleValue)));
   //radio.powerUp();
   bool ok = radio.write(&angleValue, sizeof(angleValue));
-  Serial.println("ok: " + String(ok));
   delay(100);
 }

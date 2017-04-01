@@ -23,14 +23,11 @@ void setup() {
 void loop() {
   //radio.powerUp();
   //delay(50);
-  Serial.println("receptor - aqui1");
   if (radio.available()) {
     int angleV = 0;
-    Serial.println("receptor - aqui2");
     radio.read(&angleV, sizeof(angleV));
-    Serial.println("receptor - aqui3");
     myServo.write(angleV);
-    Serial.println("Receptor: " + String(angleV));
+    Serial.println(angleV);
     delay(5);
   }
 }

@@ -6,13 +6,11 @@ SoftwareSerial esp8266(2, 3);
  
 #define DEBUG true
 String serv = "gisexp.icomp.ufam.edu.br";
-String ssid = "Arduino";
-String password = "364455391a";
+String ssid = "rede";
+String password = "senha";
 
 void setup()
 {
-  pinMode(13,OUTPUT);
-  digitalWrite(13,LOW);
   Serial.begin(9600);
   esp8266.begin(19200);
  
