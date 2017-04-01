@@ -1,5 +1,5 @@
 
-//Pisca led na GPIO-2 a cada 4 segundos
+//Pisca led na GPIO-2 a cada 500 milisegundos
 void setup() {
   pinMode(2, OUTPUT);
 }
